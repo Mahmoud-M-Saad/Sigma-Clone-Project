@@ -5,12 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         {{-- BootStrap CSS link --}}
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-            crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
+        {{-- Our CSS style --}}
+        <link rel="stylesheet" href="/css/app.css">
+        
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
         {{-- titlle --}}
@@ -106,28 +105,28 @@
 
                         <!-- Right Side Of Navbar -->
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link" href="#">CATEGORIES</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">HOME</a>
+                            <li>
+                                <a class="nav-link" href="{{ route('products.index') }}">HOME</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">ABOUT US</a>
+                            <li>
+                                <a class="nav-link" href="{{ route('about_us') }}">ABOUT US</a>
                             </li>
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link" href="#">CONTACT US</a>
                             </li>
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link" href="#">BLOG</a>
                             </li>
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link" href="#">SPECIAL OFFER</a>
                             </li>
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link" href="#">SELLER</a>
                             </li>
-                            <li class="nav-item">
+                            <li>
                                 <a class="nav-link" href="#">BUILD YOUR OWN BUNDLE</a>
                             </li>
 
@@ -136,144 +135,154 @@
                 </div>
             </nav>
 
-            <main class="py-4">
+            <main>
+                <div style="padding: 10px">
                 @yield('content')
+                </div>
             </main>
         </div>
 
         {{--  Footer --}}
-        <footer
-            class="footer"
-            style="padding:30px 50px 30px 0px;background-color: black; color:white;">
-            <div class="container">
-                <div class="row">
-                    {{-- Main Footer --}}
+        <footer >
+            <div class="Footer-Body" style="" >
+                
+                    {{-- Main Info --}}
                     <div class="footer-parts">
-                        <a href="{{ route('products.index') }}"><img style="margin-left:30px" src="https://www.sigma-computer.com/image/catalog/logo-footer.png"  alt="image"></a><br><br>
+                        <p>
+                        <a href="{{ route('products.index') }}">
+                            <img src="https://www.sigma-computer.com/image/catalog/logo-footer.png" style="margin:10px 0px 10px 30px" alt="image">
+                        </a>
+                        </p>
+                        
                         <ul>
-                            <li class="list-group-item">
+                            <li class="footer-main-info">
                                 <x-entypo-location style="width: 24px"/>&nbsp;      
                                 25 Esraa Elmoalmeen Elmohandseen
-                            </li><br>
-                            <li class="list-group-item">
+                            </li>
+                            <li class="footer-main-info">
                                 <x-tabler-headset style="width: 24px" />&nbsp;
                                 0233033099
-                            </li><br>
-                            <li class="list-group-item">
+                            </li>
+                            <li class="footer-main-info">
                                 <x-majestic-mail-open-line style="width:24px" />&nbsp;
                                 Sigmapc@gmail.Com
-                            </li><br>
-                            <li class="list-group-item">
+                            </li>
+                            <li class="footer-main-info">
                                 <x-zondicon-timer style="width: 24px" />&nbsp;
                                 Open Time: 11:00AM - 07:00PM
-                            </li><br>
+                            </li>
                         </ul>
                     </div>
+
                     {{-- Information --}}
-                    <div class="footer-parts">
-                        <h3>INFORMATION</h3>
-                        <p style="width:95px; height:2px; border-top:2px solid #58a3da">
+                    <div class="footer-parts"> 
                         <ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">About Us</a>
+                            <h3>INFORMATION</h3>
+                            <p class="blue_Line"></p>
+                            <li>
+                                
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>About Us</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact Us</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Contact Us</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Login</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Login</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Register</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Register</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Privacy Policy</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Privacy Policy</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Our branches</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Our branches</a>
                             </li>
                         </ul>
                     </div>
+
                     {{-- BRANDS --}}
-                    <div class="footer-parts">
-                        <h3>BRANDS</h3>
-                        <p style="width:95px; height:2px; border-top:2px solid #58a3da">
+                    <div class="footer-parts">                        
                         <ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Western Digital</a>
+                            <h3>BRANDS</h3>
+                            <p class="blue_Line"></p>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Western Digital</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Western Digital</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Western Digital</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Lenovo</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Lenovo</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Dell</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Dell</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Canon</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Canon</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">BENQ</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>BENQ</a>
                             </li>
                         </ul>
                     </div>
 
                     {{-- CATEGORIES --}}
-                    <div class="footer-parts">
-                        <h3>BRANDS</h3>
-                        <p style="width:95px; height:2px; border-top:2px solid #58a3da">
+                    <div class="footer-parts">                        
                         <ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Desktop</a>
+                            <h3>BRANDS</h3>
+                            <p class="blue_Line"></p>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Desktop</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Notebook</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Notebook</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Storage</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Storage</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Network</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Network</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Network</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>Network</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">BENQ</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>BENQ</a>
                             </li>
                         </ul>
                     </div>
+
                     {{-- SELLER --}}
-                    <div class="footer-parts">
-                        <h3>SELLER</h3>
-                        <p style="width:95px; height:2px; border-top:2px solid #58a3da">
+                    <div class="footer-parts">                        
                         <ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">sigma</a>
+                            <h3>SELLER</h3>
+                            <p class="blue_Line"></p>
+                            <li>                                
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>sigma</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">aula</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>aula</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">ingco</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>ingco</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">msi</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>msi</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">c-m</a>
+                            <li>
+                                <a href="#"><x-css-edit-black-point class="dotPoint"/>c-m</a>
                             </li>
                         </ul>
                     </div>
+
                     {{-- SIGNUP FOR NEWSLETTER --}}
                     <div class="footer-parts">
                         <h3>SIGNUP FOR NEWSLETTER</h3>
-                        <p style="width:95px; height:2px; border-top:2px solid #58a3da">
-                            <p>We'll never share your email address with a third-party.</p>                            
+                        <p class="blue_Line"></p>
+                        <p> We'll never share your email address with a third-party.</p>                            
                     </div>
-                </div>
+                
             </div>
         </footer>
         {{-- END of Footer --}}
