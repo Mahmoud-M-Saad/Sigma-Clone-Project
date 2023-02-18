@@ -26,9 +26,13 @@ Route::group(['middleware'=>['auth']],function(){
 
 });
 
-//to show all products
+//Home Page & To show all products
 Route::get('/products',[ProductController::class, 'index'])->name(name:'products.index'); 
 //to search for specific product
 Route::get('/products/{product}',[ProductController::class, 'show'])->name(name:'products.show');
 
+//About Us Page
+Route::get('/about', function () {
+    return view('about_us');
+})->name(name:'about_us');
     
