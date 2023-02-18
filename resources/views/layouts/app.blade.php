@@ -32,21 +32,7 @@
                 type="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="icon icon-tabler icon-tabler-user"
-                    width="24"
-                    height="24"
-                    viewbox="0 0 24 24"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    fill="none"
-                    stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M12 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
-                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"></path>
-                </svg>
+                <x-forkawesome-user style="width: 20px" />
             </button>
             <ul class="dropdown-menu">
                 {{-- Login & Register --}}
@@ -158,50 +144,29 @@
         {{--  Footer --}}
         <footer
             class="footer"
-            style="padding:30px 50px 50px 5px;background-color: black; color:white;">
+            style="padding:30px 50px 30px 0px;background-color: black; color:white;">
             <div class="container">
                 <div class="row">
                     {{-- Main Footer --}}
                     <div class="footer-parts">
-                        <a href="{{ route('products.index') }}"><img src="https://www.sigma-computer.com/image/catalog/logo-footer.png"  alt="image"></a><br><br>
+                        <a href="{{ route('products.index') }}"><img style="margin-left:30px" src="https://www.sigma-computer.com/image/catalog/logo-footer.png"  alt="image"></a><br><br>
                         <ul>
                             <li class="list-group-item">
-                                <svg
-                                 xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 11m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
-                                 </svg>
-                                 25 Esraa Elmoalmeen Elmohandseen</li><br>
+                                <x-entypo-location style="width: 24px"/>&nbsp;      
+                                25 Esraa Elmoalmeen Elmohandseen
+                            </li><br>
                             <li class="list-group-item">
-                                <svg
-                                 xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-headset" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M4 14v-3a8 8 0 1 1 16 0v3"></path>
-                                    <path d="M18 19c0 1.657 -2.686 3 -6 3"></path>
-                                    <path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z"></path>
-                                    <path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z"></path>
-                                 </svg>
-                                0233033099</li><br>
+                                <x-tabler-headset style="width: 24px" />&nbsp;
+                                0233033099
+                            </li><br>
                             <li class="list-group-item">
-                                <svg
-                                 xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-mail-opened" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M3 9l9 6l9 -6l-9 -6l-9 6"></path>
-                                    <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"></path>
-                                    <path d="M3 19l6 -6"></path>
-                                    <path d="M15 13l6 6"></path>
-                                 </svg>
-                                Sigmapc@gmail.Com</li><br>
+                                <x-majestic-mail-open-line style="width:24px" />&nbsp;
+                                Sigmapc@gmail.Com
+                            </li><br>
                             <li class="list-group-item">
-                                <svg
-                                 xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock-hour-7" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
-                                    <path d="M12 12l-2 3"></path>
-                                    <path d="M12 7v5"></path>
-                                 </svg>
-                                Open Time: 11:00AM - 07:00PM</li><br>
+                                <x-zondicon-timer style="width: 24px" />&nbsp;
+                                Open Time: 11:00AM - 07:00PM
+                            </li><br>
                         </ul>
                     </div>
                     {{-- Information --}}
@@ -318,17 +283,16 @@
             Sigma Computer © 2019 All Rights Reserved. Designed by Sigma Computer
              Footer Social Icons
              <button type="button" class="btn btn-outline-secondary">
-                <svg
-                 xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-facebook" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path></svg>
+                <x-ri-facebook-fill style="width: 24px" />
             </button>
              <button type="button" class="btn btn-outline-secondary">
-                Secondary
+                twitter <x-bi-twitter style="width: 24px" />
             </button>
              <button type="button" class="btn btn-outline-secondary">
-                Secondary
+                YouTube <x-bi-youtube style="width: 24px" /> 
             </button>
              <button type="button" class="btn btn-outline-secondary">
-                Secondary
+                linkedin <x-ri-linkedin-fill style="width: 24px" />
             </button>
         </div> --}}
         
