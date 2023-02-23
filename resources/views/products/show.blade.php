@@ -1,6 +1,7 @@
 @extends('layouts.app')
-@section('title') search @endsection
+@section('title') Shopping Cart @endsection
 @section('content')
+@section('page_name') Shopping Cart @endsection
 
 {{-- let's Start our code here --}}
 

@@ -148,8 +148,14 @@
                 </div>
             </nav>
             <main>
-                <div style="padding: 20px">
-                @yield('content')
+                <div style="padding: 20px 70px 20px 70px">
+                    <a href="{{ route('products.index') }}" style="text-decoration: none;">
+                        <x-fas-home style="width: 15px; color: gray;" />
+                    </a>
+                    <x-ri-arrow-right-s-line style="width: 20px; color: gray;" />
+                    @yield('page_name')
+                    <br><br>                
+                    @yield('content')
                 </div>
             </main>
         </div>
@@ -190,8 +196,7 @@
                     <ul>
                         <h3>INFORMATION</h3>
                         <p class="blue_Line"></p>
-                        <li>
-                            
+                        <li>                            
                             <a href="{{ route('about_us') }}"><x-css-edit-black-point class="dotPoint"/>About Us</a>
                         </li>
                         <li>
@@ -204,10 +209,10 @@
                             <a href="#"><x-css-edit-black-point class="dotPoint"/>Register</a>
                         </li>
                         <li>
-                            <a href="#"><x-css-edit-black-point class="dotPoint"/>Privacy Policy</a>
+                            <a href="{{ route('privacy_policy') }}"><x-css-edit-black-point class="dotPoint"/>Privacy Policy</a>
                         </li>
                         <li>
-                            <a href="#"><x-css-edit-black-point class="dotPoint"/>Our branches</a>
+                            <a href="{{ route('branches') }}"><x-css-edit-black-point class="dotPoint"/>Our branches</a>
                         </li>
                     </ul>
                 </div>

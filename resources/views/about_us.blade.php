@@ -1,6 +1,8 @@
 @extends('layouts.app')
-@section('title') ABOUT @endsection
+@section('title') About @endsection
 @section('content')
+@section('page_name') About Us @endsection
+
 <style>
 @media(max-width:999.999px){
     .about-us-parent{
@@ -23,12 +25,6 @@
 
 {{-- let's Start our code here --}}
 
-<a href="{{ route('products.index') }}">
-    <x-fas-home style="width: 15px; color:gray;"/>
-</a>
-<x-ri-arrow-right-s-line style="width: 20px; color:gray;"/>
-About Us 
-<br><br>
 <div class="about-us-parent">
     <div class="about-us-childs" id="about-us-childs">
         <h3>Welcome To Shop</h3><br>

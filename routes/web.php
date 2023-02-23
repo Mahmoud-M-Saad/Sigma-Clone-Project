@@ -35,4 +35,14 @@ Route::get('/products/{product}',[ProductController::class, 'show'])->name(name:
 Route::get('/about', function () {
     return view('about_us');
 })->name(name:'about_us');
+
+// branches Page
+Route::get('/branches', function () {
+    return view('branches');
+})->name(name:'branches');
+
+// // Privacy Policy Page
+Route::get('/privacy_policy', function () {
+    return view('privacy_policy');
+})->name(name:'privacy_policy');
     
