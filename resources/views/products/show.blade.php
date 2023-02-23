@@ -1,4 +1,9 @@
 @extends('layouts.app')
+<<<<<<< HEAD
+@section('title') Shopping Cart @endsection
+@section('content')
+@section('page_name') Shopping Cart @endsection
+=======
 @section('title')
     search
 @endsection
@@ -7,17 +12,13 @@
         .card-body {
             background-color: #f3f3f3 !important
         }
+>>>>>>> main
 
         .prod-title {
             max-width: 50px !important;
         }
     </style>
     <div class="container">
-        <div>
-            <i class="bi bi-trash3 fs-1 text-danger"></i>
-            &gt;
-            <span class="text-primary ms-2">Shopping Cart</span>
-        </div>
         <div>
             <h3>
                 Shopping Cart
